@@ -37,7 +37,7 @@ void case {
 		int x; scan x;
 		x %= k;
 		fu(j, 0, k-1)
-		    dp[i][j] = max(dp[i - 1][j], dp[i - 1][(j + k - x) % k] + 1);
+		    dp[i][j] = max(dp[i - 1][j], dp[i - 1][(j - x + k) % k] + 1);
 	}
 	println(dp[n][0]);
 }
